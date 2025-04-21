@@ -1,0 +1,14 @@
+<main class="habilidades-container">
+  <section class="habilidades">
+    <h1 class="titulo">Habilidades</h1>
+    <p class="descricao">Essas são algumas das tecnologias com as quais tenho experiência:</p>
+
+    <div class="grid-habilidades">
+      <% habilidades.forEach(hab => { %>
+        <div class="habilidade">
+          <img class="w-12 h-12" alt="<%= hab.nome %>" src="<%= hab.img %>">
+        </div>
+      <% }); %>
+    </div>
+  </section>
+</main>

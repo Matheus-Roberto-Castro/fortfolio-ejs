@@ -1,0 +1,48 @@
+.contato-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.links-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 150px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.links-contato a {
+  text-align: center;
+}
+
+.redes-sociais-contato {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.redes-sociais-contato svg {
+  width: 40px;
+  color: white;
+}
+
+.redes-sociais-contato svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.redes-sociais-contato svg:hover {
+  color: #00ffff;
+  transform: translateY(-5px);
+}
