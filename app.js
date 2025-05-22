@@ -1,7 +1,17 @@
 const express = require('express');
 const ejsLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
+const projetosRoutes = require('./routes/projetos');
+const tecnologiasRoutes = require('./routes/tecnologias');
+const projetoTecnologiaRoutes = require('./routes/projetoTecnologia');
 const app = express();
 const port = 3000;
+
+app.use(bodyParser.json());
+
+app.use('/projetos', projetosRoutes);
+app.use('/tecnologias', tecnologiasRoutes);
+app.use('/projeto-tecnologia', projetoTecnologiaRoutes);
 
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
