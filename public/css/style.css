@@ -71,7 +71,8 @@ body {
   color: #aaa;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -82,52 +83,92 @@ main {
   flex: 1;
 }
 
+/* ======= Botão hambúrguer ======= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
 
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* ======= Responsividade ======= */
 @media (max-width: 768px) {
-
   .nav-container {
-      flex-direction: column; 
-      align-items: center;
+    flex-direction: row;
+    /* mudar de column para row */
+    justify-content: space-between;
+    /* logo à esquerda, botão à direita */
+    align-items: center;
+    /* alinhar verticalmente */
   }
 
   .nav-links {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #0f0f0f;
+    border-top: 1px solid #222;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
   }
 
-  .habilidade img {
-      max-width: 50px; 
+  .nav-links.active {
+    display: flex;
   }
 
-  .botao-curriculo {
-      margin-top: 10px; 
+  .nav-links li {
+  width: auto;
+}
+
+
+  .hamburger {
+    display: flex;
   }
 
-  .footer {
-      font-size: 12px; 
+  /* Opcional: para que o header fique relative e o menu absoluto funcione */
+  .header {
+    position: relative;
   }
 }
 
+
 @media (max-width: 480px) {
- 
+
   .header {
-      padding: 8px;
+    padding: 8px;
   }
 
   .nav-links {
-      gap: 15px;
+    gap: 15px;
   }
 
   .logo {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .habilidade img {
-      max-width: 40px;
+    max-width: 40px;
   }
 
   .botao-curriculo {
-      padding: 6px 12px;
+    padding: 6px 12px;
   }
 }

@@ -5,6 +5,8 @@
   justify-content: center;
   margin-top: -2.5rem;
   margin-bottom: 1.25rem;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .home-content {
@@ -15,6 +17,7 @@
   padding-top: 5rem;
   margin: 5rem;
   width: 100%;
+  max-width: 1200px; /* Evita que fique muito largo em telas grandes */
 }
 
 .intro-text {
@@ -35,4 +38,40 @@
   font-weight: 300;
   margin: 0;
   color: #a1a1aa;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    margin: 2rem;
+    padding-top: 3rem;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    margin: 1rem;
+    padding-top: 2rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }

@@ -9,9 +9,9 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-app.use('/projetos', projetosRoutes);
-app.use('/tecnologias', tecnologiasRoutes);
-app.use('/projeto-tecnologia', projetoTecnologiaRoutes);
+app.use('/backprojetos', projetosRoutes);
+app.use('/backtecnologias', tecnologiasRoutes);
+app.use('/backprojeto-tecnologia', projetoTecnologiaRoutes);
 
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
